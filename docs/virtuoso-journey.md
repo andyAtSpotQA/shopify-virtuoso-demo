@@ -348,6 +348,10 @@ The Storefront API has separate, much more lenient limits. When a prospect says 
 
 ---
 
+## Reference journey export
+
+A real Virtuoso journey export built against this blueprint is checked in at [`examples/virtuoso-demo-shop-journey.json`](../examples/virtuoso-demo-shop-journey.json). Import it directly into Virtuoso as a starting point rather than rebuilding from the blueprint above. You'll still need to swap in your own `adminToken`, `publicationId`, `shopDomain`, and `storefrontUrl` variables.
+
 ## Demo audience
 
 `docs/get-token.md` and `scripts/get-token.js` are **prospect-facing demo deliverables**, not throwaway helpers. Keep them accurate and replicable — drift will break demos. Same goes for this journey blueprint.
