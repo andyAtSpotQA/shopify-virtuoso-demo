@@ -39,6 +39,12 @@ The script prints an OAuth authorize URL — open it in a browser logged into yo
 
 Full walkthrough (including Partner-dashboard app setup): [`docs/get-token.md`](./docs/get-token.md).
 
+## Docs
+
+- [`docs/architecture.md`](./docs/architecture.md) — topology, key decisions, what was deliberately not built.
+- [`docs/get-token.md`](./docs/get-token.md) — how to mint a Shopify Admin API token via OAuth (prospect-facing walkthrough).
+- [`docs/virtuoso-journey.md`](./docs/virtuoso-journey.md) — full Virtuoso journey blueprint: 8 API + UI steps with battle-tested request bodies, helper extensions, and operational notes.
+
 ## Architecture overview
 
 For the full picture — topology, key decisions, what was deliberately not built — see [`docs/architecture.md`](./docs/architecture.md).
