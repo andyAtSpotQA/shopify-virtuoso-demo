@@ -39,17 +39,14 @@ The script prints an OAuth authorize URL — open it in a browser logged into yo
 
 Full walkthrough (including Partner-dashboard app setup): [`docs/get-token.md`](./docs/get-token.md).
 
-## Docs
+## Docs and examples
 
 - [`docs/architecture.md`](./docs/architecture.md) — topology, key decisions, what was deliberately not built.
 - [`docs/get-token.md`](./docs/get-token.md) — how to mint a Shopify Admin API token via OAuth (prospect-facing walkthrough).
 - [`docs/virtuoso-journey.md`](./docs/virtuoso-journey.md) — full Virtuoso journey blueprint: 8 API + UI steps with battle-tested request bodies, helper extensions, and operational notes.
+- [`examples/virtuoso-demo-shop-journey.json`](./examples/virtuoso-demo-shop-journey.json) — a real Virtuoso journey export, importable directly into Virtuoso as a starting point.
 
-## Architecture overview
-
-For the full picture — topology, key decisions, what was deliberately not built — see [`docs/architecture.md`](./docs/architecture.md).
-
-The short version:
+## Architecture in 30 seconds
 
 - `src/api.ts` — thin GraphQL client. Falls back to `mock.shop` if `VITE_*` env vars are absent.
 - `src/cart.ts` — localStorage cart with a tiny pub/sub. Client-only, no backend.
@@ -87,7 +84,12 @@ No test suite, linter, or formatter is configured — intentionally. Add only if
 
 ## Demo deliverables
 
-`scripts/get-token.js` and `docs/get-token.md` are **prospect-facing** demo deliverables, not throwaway helpers. They show prospects how to obtain an Admin API token now that Shopify retired the "legacy custom app" flow (disabled for new creations 2026-01-01). Keep them accurate — drift will break demos.
+The following are **prospect-facing** demo deliverables, not throwaway helpers:
+
+- `scripts/get-token.js` + `docs/get-token.md` — how to obtain an Admin API token now that Shopify retired the "legacy custom app" flow (disabled for new creations 2026-01-01).
+- `docs/virtuoso-journey.md` + `examples/virtuoso-demo-shop-journey.json` — the full reference journey and an importable example.
+
+Keep them accurate — drift will break demos.
 
 ## What this is *not*
 
